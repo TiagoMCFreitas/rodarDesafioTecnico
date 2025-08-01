@@ -1,8 +1,7 @@
 services:
   app:
     image: desafiotecnico-app:v1
-    depends_on:
-      - banco
+    
     ports:
       - 8080:8080
     restart: always
