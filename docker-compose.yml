@@ -1,0 +1,23 @@
+services:
+  app:
+    image: desafiotecnico-app:v1
+    depends_on:
+      - banco
+    ports:
+      - 8080:8080
+    restart: always
+
+  syncservice:
+    image: desafiotecnico-syncservice:v1
+    restart: always
+
+  banco:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
