@@ -87,11 +87,8 @@ Gerar as imagens
 ```bash bash buildImages.sh :v1```
 Troque :v1 para a versão que desejar. O script atualizará as imagens para essa tag.
 
-Rodar os containers
-```bash docker-compose up -d```
-Parar e remover containers
-
-```bash docker-compose down```
+Rodar os containers ```bash docker-compose up -d```
+Parar e remover containers ```bash docker-compose down```
 📝 Observações
 Certifique-se de ter o Docker e Docker Compose instalados na sua máquina.
 
